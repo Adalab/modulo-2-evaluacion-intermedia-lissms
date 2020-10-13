@@ -16,18 +16,16 @@ console.log("el numero aleatorio es", randomNumber);
 
 function getAMessage() {
   let number = parseInt(numberString.value);
-  if (number === randomNumber) {
-    message.innerHTML = "Has ganado campeon!!!";
-  } else if (number > randomNumber < 100) {
-    message.innerHTML = "Demasiado alto.";
-  } else if (number < randomNumber) {
-    message.innerHTML = "Demasiado bajo..";
-  } else if (number > 100) {
+  if (number > 100) {
     message.innerHTML = "El número debe estar entre 1 y 100.";
   } else if (number < 1) {
     message.innerHTML = "El número debe estar entre 1 y 100.";
-  } else if (number === NaN) {
-    message.innerHTML = "El número debe estar entre 1 y 100.";
+  } else if (number === randomNumber) {
+    message.innerHTML = "Has ganado campeon!!!";
+  } else if (number > randomNumber) {
+    message.innerHTML = "Demasiado alto.";
+  } else if (number < randomNumber) {
+    message.innerHTML = "Demasiado bajo..";
   }
   console.log("number.value", number);
 }
